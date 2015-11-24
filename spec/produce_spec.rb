@@ -2,7 +2,7 @@ require './lib/produce'
 
 describe Produce do
   it 'creates a carrot' do
-    produce = Produce.new
-    expect(produce).to be_defined
+    produce = Produce.new name: 'carrot'
+    expect(produce.name).to 'carrot'
   end
 end

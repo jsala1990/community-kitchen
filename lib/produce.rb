@@ -1,4 +1,5 @@
 require 'active_record'
+require './config/environment'
 
-class Produce
+class Produce < ActiveRecord::Base
 end
