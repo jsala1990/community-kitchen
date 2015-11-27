@@ -1,3 +1,4 @@
 ---
-adapter: sqlite3
-database: db/community_kitchen
+test:
+  adapter: sqlite3
+  database: db/community_kitchen

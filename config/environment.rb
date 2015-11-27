@@ -1,3 +1,5 @@
-environment = ENV.fetch('RACK_ENV') { 'development'}
-config = DBConfig.new(environment).options
-ActiveRecord::Base.establish_connection(config)
+require './lib/db_config'
+
+environment = ENV.fetch('RACK_ENV') { 'test' }
+config = DBConfig.new(environment)
+ActiveRecord::Base.establish_connection(config.options)
