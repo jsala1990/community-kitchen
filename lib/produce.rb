@@ -1,5 +1,9 @@
-require 'active_record'
-require './config/environment'
+class Produce
 
-class Produce < ActiveRecord::Base
+  attr_accessor :name, :quantity
+
+  def initialize args
+    @name = args[:name]
+    @quantity = args[:quantity]
+  end
 end
