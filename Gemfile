@@ -6,3 +6,4 @@ gem 'rake'
 #group into development
 gem 'rspec', '~> 3.4'
 gem 'rubocop'
+gem 'rack-test'
