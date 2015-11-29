@@ -10,3 +10,6 @@ gem 'minitest'
 ##db
 gem 'sinatra-activerecord'
 gem 'sqlite3'
+
+##test
+gem 'rack-test'
