@@ -1,15 +1,16 @@
 require './app'
 require './test/spec_helper'
-# describe 'App' do
-#   include Rack::Test::Methods
+require 'rack/test'
 
-#   def app
-#     Sinatra::Application
-#   end
+include Rack::Test::Methods
+describe 'App' do
+  def app
+    Sinatra::Application
+  end
 
-#   it 'should do something' do
-#     get '/'
-#     expect(last_response.body).to eq('Hello World')
-#   end
+  it 'should do something' do
+    get '/'
+    last_response.body.must_equal 'Hello World'
+  end
 
-# end
+end
