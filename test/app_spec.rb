@@ -8,12 +8,19 @@ describe 'App' do
     Sinatra::Application
   end
 
-  it 'return all community items' do
-    ["orange", "banana", "grapefruit"].each do |food|
-      Produce.new name: food, quantity: 1, unit: 'lbs'
+  describe '#get' do
+    it 'validates existance of api' do
+      get '/community-kitchen'
+      assert last_response.ok?
     end
-    get '/community-kitchen'
-    last_response.body.count.must_equal 3
-  end
 
+    it 'return all community items' do
+      skip('not done yet')
+      ["orange", "banana", "grapefruit"].each do |food|
+        Produce.new name: food, quantity: 1, unit: 'lbs'
+      end
+      get '/community-kitchen'
+      last_response.body.count.must_equal 3
+    end
+  end
 end
