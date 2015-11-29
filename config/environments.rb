@@ -1,3 +1,4 @@
+require 'active_record'
 require './lib/db_config'
 
 environment = ENV.fetch('RACK_ENV') { 'test' }

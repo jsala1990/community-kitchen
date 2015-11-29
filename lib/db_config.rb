@@ -1,6 +1,7 @@
 require 'yaml/store'
 
 class DBConfig
+  class UnconfiguredEnvironment < StandardError; end
 
   attr_reader :file, :environment
   def initialize(environment, file='./config/database.yml')
@@ -15,7 +16,6 @@ class DBConfig
     end
     unless result
       error = "No environment '#{@environment}' configured in #{@file}"
-      puts error
       raise UnconfiguredEnvironment.new(error)
     end
     result

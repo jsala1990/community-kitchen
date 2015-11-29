@@ -1,4 +1,8 @@
 ---
 test:
   adapter: sqlite3
-  database: db/community_kitchen
+  database: 'db/footest.sqlite3'
+
+development:
+  adapter: sqlite3
+  database: 'db/foo.sqlite3'
