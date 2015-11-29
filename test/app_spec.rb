@@ -8,9 +8,12 @@ describe 'App' do
     Sinatra::Application
   end
 
-  it 'should do something' do
-    get '/'
-    last_response.body.must_equal 'Hello World'
+  it 'return all community items' do
+    ["orange", "banana", "grapefruit"].each do |food|
+      Produce.new name: food, quantity: 1, unit: 'lbs'
+    end
+    get '/community-kitchen'
+    last_response.body.count.must_equal 3
   end
 
 end

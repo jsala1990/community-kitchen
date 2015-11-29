@@ -1,6 +1,6 @@
 require './config/environments'
 require 'sinatra'
 
-get '/' do
+get '/community-kitchen' do
   'Hello World'
 end
