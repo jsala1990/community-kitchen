@@ -14,7 +14,10 @@ describe Produce do
     end
   end
 
-  describe '' do
-
+  describe '#queries' do
+    Produce.new(name: 'something', quantity: '3', unit: 'lbs').save!
+    it 'uses the #all method correctly' do
+      assert Produce.all.count, 1
+    end
   end
 end
