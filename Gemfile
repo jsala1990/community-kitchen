@@ -13,3 +13,4 @@ gem 'sqlite3'
 
 ##test
 gem 'rack-test'
+gem 'factory_girl', '~> 4.0'

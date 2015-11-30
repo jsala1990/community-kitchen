@@ -12,6 +12,7 @@ describe 'App' do
     it 'validates existance of api' do
       get '/community-kitchen'
       assert last_response.ok?
+      assert_equal 'application/json', last_response.headers['Content-Type']
     end
 
     it 'return all community items' do
