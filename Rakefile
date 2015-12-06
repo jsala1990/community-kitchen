@@ -14,7 +14,6 @@ namespace :db do
 end
 
 Rake::TestTask.new do |t|
-  ENV['RACK_ENV'] = 'test'
   t.pattern = 'test/**/*_spec.rb'
 end
 

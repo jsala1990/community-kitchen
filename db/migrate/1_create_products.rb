@@ -1,6 +1,6 @@
-class CreateProducts < ActiveRecord::Migration
+class CreateFood < ActiveRecord::Migration
   def self.up
-    create_table :products do |t|
+    create_table :foods do |t|
       t.string :name, null: false
       t.integer :quantity, null: false
       t.string :unit, null: false
@@ -8,6 +8,6 @@ class CreateProducts < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :products
+    drop_table :foods
   end
 end
