@@ -1,7 +1,8 @@
-require 'minitest/autorun'
-require 'minitest'
-require 'factory_girl'
+ENV['RACK_ENV'] = 'test'
 
-class Minitest::Spec
-  include FactoryGirl::Syntax::Methods
-end
+require 'minitest'
+require 'minitest/spec'
+require 'minitest/autorun'
+require 'sqlite3'
+require 'active_record'
+require './config/environment'

@@ -9,6 +9,7 @@ gem 'minitest'
 
 ##db
 gem 'sqlite3'
+gem 'activerecord'
 
 ##test
-gem 'factory_girl', '~> 4.0'
+gem 'sequel'
